@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Dokter Poliklinik</title>
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            margin-top: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 15px 20px;
+        }
+
+        .doctor-item {
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .doctor-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .doctor-name {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .doctor-schedule {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 3px;
+        }
+
+        .note {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Jadwal Dokter Poliklinik</h1>
+            <p>Silakan cek jadwal praktik dokter spesialis di bawah ini sebelum berkunjung.</p>
+        </header>
+
+        <div class="grid">
+            <!-- Poliklinik Penyakit Dalam -->
+            <div class="card">
+                <div class="card-header">Poliklinik Penyakit Dalam</div>
+                <div class="card-body">
+                    <div class="doctor-item">
+                        <div class="doctor-name">dr. Andi Pratama, Sp.PD</div>
+                        <div class="doctor-schedule">Senin & Rabu | 08.00 - 12.00</div>
+                    </div>
+                    <div class="doctor-item">
+                        <div class="doctor-name">dr. Siti Rahma, Sp.PD, K-GH</div>
+                        <div class="doctor-schedule">Selasa & Kamis | 13.00 - 16.00</div>
+                    </div>
+                    <div class="doctor-item">
+                        <div class="doctor-name">dr. Budi Santoso, Sp.PD</div>
+                        <div class="doctor-schedule">Jumat & Sabtu | 08.00 - 11.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Poliklinik Anak -->
+            <div class="card">
+                <div class="card-header">Poliklinik Anak (Pediatri)</div>
+                <div class="card-body">
+                    <div class="doctor-item">
+                        <div class="doctor-name">dr. Dian Kusuma, Sp.A</div>
+                        <div class="doctor-schedule">Senin, Rabu, Jumat | 09.00 - 13.00</div>
+                    </div>
+                    <div class="doctor-item">
+                        <div class="doctor-name">dr. Rian Hidayat, Sp.A, M.Sc</div>
+                        <div class="doctor-schedule">Selasa & Kamis | 08.00 - 11.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Poliklinik Kandungan & Kebidanan -->
+            <div class="card">
+                <div class="card-header">Poliklinik Kandungan & Kebidanan (OBGYN)</div>
+                <div class="card-body">
+                    <div class="doctor-item">
+                        <div class="doctor-name">dr. Maya Lestari, Sp.OG</div>
+                        <div class="doctor-schedule">Senin, Selasa, Kamis | 14.00 - 17.00</div>
+                    </div>
+                    <div class="doctor-item">
+                        <div class="doctor-name">dr. Hendra Wijaya, Sp.OG, K.Onk</div>
+                        <div class="doctor-schedule">Rabu & Jumat | 08.00 - 12.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Poliklinik Bedah Umum -->
+            <div class="card">
+                <div class="card-header">Poliklinik Bedah Umum</div>
+                <div class="card-body">
+                    <div class="doctor-item">
+                        <div class="doctor-name">dr. Faisal Akbar, Sp.B</div>
+                        <div class="doctor-schedule">Senin, Rabu, Jumat | 13.00 - 15.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Poliklinik Saraf -->
+            <div class="card">
+                <div class="card-header">Poliklinik Saraf (Neurologi)</div>
+                <div class="card-body">
+                    <div class="doctor-item">
+                        <div class="doctor-name">dr. Ratna Sari, Sp.S</div>
+                        <div class="doctor-schedule">Selasa & Kamis | 09.00 - 12.00</div>
+                    </div>
+                    <div class="doctor-item">
+                        <div class="doctor-name">dr. Yoga Pratama, Sp.N</div>
+                        <div class="doctor-schedule">Sabtu | 08.00 - 11.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Poliklinik Gigi dan Mulut -->
+            <div class="card">
+                <div class="card-header">Poliklinik Gigi dan Mulut</div>
+                <div class="card-body">
+                    <div class="doctor-item">
+                        <div class="doctor-name">drg. Anita Wijayanti</div>
+                        <div class="doctor-schedule">Senin s.d. Jumat | 08.00 - 14.00</div>
+                    </div>
+                    <div class="doctor-item">
+                        <div class="doctor-name">drg. Dimas Anggara</div>
+                        <div class="doctor-schedule">Sabtu | 08.00 - 12.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>Catatan:</strong> Jadwal di atas bersifat ilustrasi umum dan dapat berubah sewaktu-waktu apabila dokter berhalangan hadir atau mengambil cuti. Sebaiknya konfirmasikan kembali ke bagian pendaftaran rumah sakit tujuan Anda sebelum berkunjung.
+        </div>
+    </div>
+
+</body>
+</html>
